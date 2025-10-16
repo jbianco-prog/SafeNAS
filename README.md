@@ -37,7 +37,7 @@
 1. Download the script:
 ```powershell
 # Clone or download the script file
-Invoke-WebRequest -Uri "https://your-repo/SafeNAS.ps1" -OutFile "SafeNAS.ps1"
+Invoke-WebRequest -Uri "https://github.com/jbianco-prog/SafeNAS/SafeNAS.ps1" -OutFile "SafeNAS.ps1"
 ```
 
 2. Edit the configuration section (lines 12-66):
