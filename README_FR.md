@@ -341,7 +341,7 @@ Les contributions sont les bienvenues ! Veuillez :
 
 ## 📄 Licence
 
-Ce projet est sous licence GPL - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Ce projet est sous licence GPL - voir le fichier [LICENSE](https://github.com/jbianco-prog/SafeNAS/blob/master/LICENSE_GPL.md) pour plus de détails.
 
 ---
 
