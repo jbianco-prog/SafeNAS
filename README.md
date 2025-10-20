@@ -370,5 +370,5 @@ If you find this script useful, please consider:
 ---
 
 **Last updated:** October 16, 2025  
-**Version:** 3.1 (SafeNAS), built by humans augmented by AI
+**Version:** 3.1 (SafeNAS), built by humans augmented by Ai  
 **Tested on:** Windows Server 2019/2022, Windows 10/11
