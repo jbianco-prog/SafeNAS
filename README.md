@@ -11,7 +11,7 @@
 
 **SafeNAS** is a PowerShell monitoring script that continuously tests antivirus protection on network shares (NAS/UNC paths). It automatically deploys **EICAR test files** to verify that your antivirus is actively scanning and removing threats in real-time.
 
-### ✨ Key Features
+### ✨ Key features
 
 - 🔄 **Automated continuous monitoring** of multiple network shares
 - 📝 **Detailed logging** with timestamps and severity levels
