@@ -11,7 +11,7 @@
 
 **SafeNAS** est un script de surveillance PowerShell qui teste en continu la protection antivirus sur les partages réseau (NAS/chemins UNC). Il déploie automatiquement des **fichiers de test EICAR** pour vérifier que votre antivirus analyse et supprime activement les menaces en temps réel.
 
-### ✨ Fonctionnalités Principales
+### ✨ Fonctionnalités principales
 
 - 🔄 **Surveillance continue automatisée** de plusieurs partages réseau
 - 📝 **Journalisation détaillée** avec horodatage et niveaux de gravité
@@ -23,7 +23,7 @@
 
 ---
 
-## 🚀 Démarrage Rapide
+## 🚀 Démarrage rapide
 
 ### Prérequis
 
@@ -87,7 +87,7 @@ graph LR
     L --> B
 ```
 
-### Flux de Traitement
+### Flux de traitement
 
 1. **Création du fichier** : Le script crée un fichier de test EICAR aléatoire sur le partage cible
 2. **Période d'attente** : Laisse le temps à l'antivirus de détecter et supprimer le fichier
@@ -101,9 +101,9 @@ graph LR
 
 ---
 
-## 🧰 Paramètres de Configuration
+## 🧰 Paramètres de configuration
 
-### Réseau & Timing
+### Réseau & timing
 
 | Variable | Description | Défaut | Exemple |
 |----------|-------------|--------|---------|
@@ -117,7 +117,7 @@ graph LR
 |----------|-------------|--------|
 | `$logFile` | Chemin du fichier journal | `.\AVTestLog.txt` |
 
-### Notification Email
+### Notification email
 
 | Variable | Description | Exemple |
 |----------|-------------|---------|
@@ -137,7 +137,7 @@ graph LR
 | `$smtpUseSSL` | Activer le chiffrement SSL | `$false` | Pour le port 465 |
 | `$smtpTimeout` | Délai de connexion (ms) | `30000` | 30 secondes |
 
-### Exemples de Configuration SMTP
+### Exemples de configuration SMTP
 
 **Pour IONOS avec TLS (Recommandé) :**
 ```powershell
@@ -165,7 +165,7 @@ $smtpUseSSL = $false
 
 ---
 
-## 📧 Exemple d'Alerte Email
+## 📧 Exemple d'alerte email
 
 Lorsqu'un échec de l'antivirus est détecté, vous recevez un email comme celui-ci :
 
@@ -187,7 +187,7 @@ Le script de surveillance
 
 ---
 
-## 📋 Format du Fichier Journal
+## 📋 Format du fichier journal
 
 Le script crée un fichier journal détaillé (`AVTestLog.txt`) avec des entrées comme :
 
@@ -207,7 +207,7 @@ Le script crée un fichier journal détaillé (`AVTestLog.txt`) avec des entrée
 16/10/2025_16:35:45 :: INFO :: ### Cycle de test terminé ###
 ```
 
-### Niveaux de Journal
+### Niveaux de journal
 
 - **START** : Initialisation du script
 - **INFO** : Information générale
@@ -218,7 +218,7 @@ Le script crée un fichier journal détaillé (`AVTestLog.txt`) avec des entrée
 
 ---
 
-## 🔧 Utilisation Avancée
+## 🔧 Utilisation avancée
 
 ### Exécution en tant que Service Windows
 
@@ -232,7 +232,7 @@ $principal = New-ScheduledTaskPrincipal -UserId "SYSTEM" -LogonType ServiceAccou
 Register-ScheduledTask -TaskName "SafeNAS-Monitor" -Action $action -Trigger $trigger -Principal $principal
 ```
 
-### Personnalisation du Modèle d'Email
+### Personnalisation du modèle d'email
 
 Éditez la variable `$emailTemplate` pour personnaliser le message de notification :
 
@@ -252,7 +252,7 @@ Ceci est un message automatisé de SafeNAS.
 "@
 ```
 
-### Test Sans Attente
+### Test sans attente
 
 Pour des tests rapides, réduisez temporairement les temps d'attente :
 
@@ -265,7 +265,7 @@ $waitAfterWriteSeconds = 5     # Attendre seulement 5 secondes
 
 ## 🐛 Dépannage
 
-### Problèmes Courants
+### Problèmes courants
 
 **1. Email non envoyé**
 ```
@@ -285,7 +285,7 @@ ERROR :: Erreur lors du traitement du chemin '\\serveur\partage' : Accès refus�
 - Vérifiez que le partage est accessible depuis la machine exécutant le script
 - Essayez de mapper le lecteur manuellement d'abord
 
-**3. Fichier EICAR non supprimé (Faux positif)**
+**3. Fichier EICAR non supprimé (faux positif)**
 ```
 ERROR :: État antivirus \\serveur\partage : NON ACTIF
 ```
@@ -296,9 +296,9 @@ ERROR :: État antivirus \\serveur\partage : NON ACTIF
 
 ---
 
-## 📊 Bonnes Pratiques
+## 📊 Bonnes pratiques
 
-✅ **À Faire :**
+✅ **À faire :**
 - Tester le script sur un seul partage d'abord
 - Utiliser un compte de service dédié avec permissions minimales
 - Surveiller régulièrement le fichier journal
@@ -306,7 +306,7 @@ ERROR :: État antivirus \\serveur\partage : NON ACTIF
 - Utiliser TLS/SSL pour les connexions SMTP
 - Stocker le script dans un emplacement sécurisé
 
-❌ **À Ne Pas Faire :**
+❌ **À ne pas faire :**
 - Exécuter avec des identifiants d'administrateur de domaine
 - Définir `$intervalMinutes` trop bas (< 2 minutes)
 - Ignorer les alertes répétées
@@ -353,7 +353,7 @@ Ce projet est sous licence GPL - voir le fichier [LICENSE](https://github.com/jb
 
 ---
 
-## 🔗 Projets Connexes
+## 🔗 Projets connexes
 
 - [Fichiers de Test EICAR](https://www.eicar.org/) - Fichiers de test antivirus standards
 
