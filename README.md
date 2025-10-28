@@ -353,7 +353,7 @@ This project is licensed under the GPL License - see the [LICENSE](https://githu
 
 ---
 
-## 🔗 Related Projects
+## 🔗 Related projects
 
 - [EICAR Test Files](https://www.eicar.org/) - Standard antivirus test files
 
