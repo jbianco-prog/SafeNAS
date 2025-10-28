@@ -23,7 +23,7 @@
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick start
 
 ### Prerequisites
 
@@ -66,7 +66,7 @@ $smtpPassword = "YourPassword"
 
 ---
 
-## ⚙️ How It Works
+## ⚙️ How it works
 
 ```mermaid
 graph LR
@@ -87,7 +87,7 @@ graph LR
     L --> B
 ```
 
-### Process Flow
+### Process flow
 
 1. **File Creation**: Script creates a random EICAR test file on the target share
 2. **Wait Period**: Allows antivirus time to detect and delete the file
@@ -101,9 +101,9 @@ graph LR
 
 ---
 
-## 🧰 Configuration Parameters
+## 🧰 Configuration parameters
 
-### Network & Timing
+### Network & timing
 
 | Variable | Description | Default | Example |
 |----------|-------------|---------|---------|
@@ -117,7 +117,7 @@ graph LR
 |----------|-------------|---------|
 | `$logFile` | Path to log file | `.\AVTestLog.txt` |
 
-### Email Notification
+### Email notification
 
 | Variable | Description | Example |
 |----------|-------------|---------|
@@ -125,7 +125,7 @@ graph LR
 | `$emailFrom` | Sender email address | `"monitoring@example.com"` |
 | `$emailSubject` | Email subject line | `"Antivirus not working - File not deleted"` |
 
-### SMTP Configuration
+### SMTP configuration
 
 | Variable | Description | Default | Notes |
 |----------|-------------|---------|-------|
@@ -137,7 +137,7 @@ graph LR
 | `$smtpUseSSL` | Enable SSL encryption | `$false` | For port 465 |
 | `$smtpTimeout` | Connection timeout (ms) | `30000` | 30 seconds |
 
-### SMTP Configuration Examples
+### SMTP configuration examples
 
 **For IONOS with TLS (Recommended):**
 ```powershell
@@ -165,7 +165,7 @@ $smtpUseSSL = $false
 
 ---
 
-## 📧 Email Alert Example
+## 📧 Email alert example
 
 When an antivirus failure is detected, you receive an email like this:
 
@@ -187,7 +187,7 @@ The monitoring script
 
 ---
 
-## 📋 Log File Format
+## 📋 Log file format
 
 The script creates a detailed log file (`AVTestLog.txt`) with entries like:
 
@@ -207,7 +207,7 @@ The script creates a detailed log file (`AVTestLog.txt`) with entries like:
 16/10/2025_16:35:45 :: INFO :: ### Test cycle completed ###
 ```
 
-### Log Levels
+### Log levels
 
 - **START**: Script initialization
 - **INFO**: General information
@@ -218,7 +218,7 @@ The script creates a detailed log file (`AVTestLog.txt`) with entries like:
 
 ---
 
-## 🔧 Advanced Usage
+## 🔧 Advanced usage
 
 ### Running as a Windows Service
 
@@ -232,7 +232,7 @@ $principal = New-ScheduledTaskPrincipal -UserId "SYSTEM" -LogonType ServiceAccou
 Register-ScheduledTask -TaskName "SafeNAS-Monitor" -Action $action -Trigger $trigger -Principal $principal
 ```
 
-### Customizing the Email Template
+### Customizing the email template
 
 Edit the `$emailTemplate` variable to customize the notification message:
 
@@ -252,7 +252,7 @@ This is an automated message from SafeNAS.
 "@
 ```
 
-### Testing Without Waiting
+### Testing without waiting
 
 For quick testing, temporarily reduce the wait times:
 
@@ -265,7 +265,7 @@ $waitAfterWriteSeconds = 5     # Wait only 5 seconds
 
 ## 🐛 Troubleshooting
 
-### Common Issues
+### Common issues
 
 **1. Email not sending**
 ```
@@ -296,7 +296,7 @@ ERROR :: Antivirus status \\server\share : NOT ACTIVE
 
 ---
 
-## 📊 Best Practices
+## 📊 Best practices
 
 ✅ **Do:**
 - Test the script on a single share first
