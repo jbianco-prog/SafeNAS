@@ -71,7 +71,7 @@ If you modify this software and want to distribute your version, include the fol
 
 ```
 SafeNAS - Network Antivirus Monitoring Script
-Copyright (C) 2014-2025 Micro-one
+Copyright (C) 2014-2026 Micro-one
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -141,4 +141,4 @@ Website: https://micro-one.com
 
 **This is a human-readable summary. The full legal license text at the link above is the authoritative version.**
 
-*Last updated: October 16, 2025*
+*Last updated: September 21, 2026*
